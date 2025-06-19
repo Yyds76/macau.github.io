@@ -694,15 +694,16 @@ function initializeAccessibility() {
   })
 }
 
+// 初始化輔助功能 - Initialize accessibility
+document.addEventListener("DOMContentLoaded", initializeAccessibility)
+
+console.log("🎉 澳門工人體育場網站腳本載入完成！ / Macau Stadium Website script loaded successfully!")
+
+//--------------------------------------------------------------------------------------------
+
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
         e.preventDefault();
     }
 });
-
-
-// 初始化輔助功能 - Initialize accessibility
-document.addEventListener("DOMContentLoaded", initializeAccessibility)
-
-console.log("🎉 澳門工人體育場網站腳本載入完成！ / Macau Stadium Website script loaded successfully!")
