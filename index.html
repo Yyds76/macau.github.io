@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳門工人體育場 | Estádio dos Trabalhadores de Macau</title>
+    
+    <!-- 引入字體和圖標庫 - Import fonts and icon libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- 引入AOS動畫庫CSS - Import AOS animation library CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- 引入樣式文件 - Import stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SEO優化 - SEO optimization -->
+    <meta name="description" content="澳門工人體育場官方網站，展示從1958年至今的歷史變遷、重大事件和現代化設施">
+    <meta name="keywords" content="澳門工人體育場,澳門體育,澳門歷史,工人體育場,關閘廣場">
+    
+    <!-- Open Graph標籤 - Open Graph tags -->
+    <meta property="og:title" content="澳門工人體育場">
+    <meta property="og:description" content="見證澳門體育文化發展的重要場所">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- 載入畫面 - Loading screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h1 class="loading-title" data-zh="澳門工人體育場" data-pt="Estádio dos Trabalhadores de Macau">澳門工人體育場</h1>
+            <p class="loading-subtitle" data-zh="載入中..." data-pt="Carregando...">載入中...</p>
+        </div>
+    </div>
+
+    <!-- 背景動畫粒子 - Background animated particles -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <!-- 導航欄 - Navigation bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo區域 - Logo area -->
+            <div class="nav-logo">
+                <div class="logo-icon">工</div>
+                <h1 class="logo-text" data-zh="澳門工人體育場" data-pt="Estádio dos Trabalhadores de Macau">澳門工人體育場</h1>
+            </div>
+
+            <!-- 桌面導航菜單 - Desktop navigation menu -->
+            <div class="nav-menu desktop-menu">
+                <button class="nav-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span data-zh="首頁" data-pt="Início">首頁</span>
+                </button>
+                <button class="nav-item" data-page="history">
+                    <i class="fas fa-book"></i>
+                    <span data-zh="歷史變遷" data-pt="História">歷史變遷</span>
+                </button>
+                <button class="nav-item" data-page="events">
+                    <i class="fas fa-star"></i>
+                    <span data-zh="重大事件" data-pt="Eventos">重大事件</span>
+                </button>
+                <button class="nav-item" data-page="facilities">
+                    <i class="fas fa-building"></i>
+                    <span data-zh="設施介紹" data-pt="Instalações">設施介紹</span>
+                </button>
+                <button class="nav-item" data-page="about">
+                    <i class="fas fa-users"></i>
+                    <span data-zh="關於我們" data-pt="Sobre Nós">關於我們</span>
+                </button>
+            </div>
+
+            <!-- 控制按鈕 - Control buttons -->
+            <div class="nav-controls">
+                <button class="lang-toggle" id="lang-toggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="lang-text">中</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 移動端側邊菜單 - Mobile side menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="nav-item mobile-nav-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span data-zh="首頁" data-pt="Início">首頁</span>
+                </button>
+                <button class="nav-item mobile-nav-item" data-page="history">
+                    <i class="fas fa-book"></i>
+                    <span data-zh="歷史變遷" data-pt="História">歷史變遷</span>
+                </button>
+                <button class="nav-item mobile-nav-item" data-page="events">
+                    <i class="fas fa-star"></i>
+                    <span data-zh="重大事件" data-pt="Eventos">重大事件</span>
+                </button>
+                <button class="nav-item mobile-nav-item" data-page="facilities">
+                    <i class="fas fa-building"></i>
+                    <span data-zh="設施介紹" data-pt="Instalações">設施介紹</span>
+                </button>
+                <button class="nav-item mobile-nav-item" data-page="about">
+                    <i class="fas fa-users"></i>
+                    <span data-zh="關於我們" data-pt="Sobre Nós">關於我們</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區域 - Main content area -->
+    <main class="main-content" id="main-content">
+        
+        <!-- 首頁 - Home page -->
+        <section class="page active" id="home-page">
+            <!-- 英雄區域 - Hero section -->
+            <div class="hero-section">
+                <div class="hero-background">
+                    <img src="https://app.faom.org.mo/app/m/common/files/ueditordownload?filepath=/image/1182d8484ea04c148d84cd38ff87cb34/20201118/1605664850733020797/P1%20(1).jpg" alt="澳門工人體育場" class="hero-bg-image">
+                    <div class="hero-overlay"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title" data-zh="澳門工人體育場" data-pt="Estádio dos Trabalhadores de Macau">澳門工人體育場</h1>
+                    <p class="hero-subtitle" data-zh="見證澳門體育文化發展的重要場所" data-pt="Local importante que testemunha o desenvolvimento da cultura desportiva de Macau">見證澳門體育文化發展的重要場所</p>
+                    <p class="hero-description" data-zh="從1958年南灣原址到2003年關閘新址，工人體育場承載著澳門人民的集體記憶，是澳門體育文化發展的重要見證。" data-pt="Do local original em Nam Van em 1958 ao novo local em Portas do Cerco em 2003, o Estádio dos Trabalhadores carrega a memória coletiva do povo de Macau e é uma importante testemunha do desenvolvimento da cultura desportiva de Macau.">從1958年南灣原址到2003年關閘新址，工人體育場承載著澳門人民的集體記憶，是澳門體育文化發展的重要見證。</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" data-page="history">
+                            <span data-zh="探索歷史" data-pt="Explorar História">探索歷史</span>
+                        </button>
+                        <button class="btn btn-secondary" data-page="facilities">
+                            <span data-zh="查看設施" data-pt="Ver Instalações">查看設施</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 滾動指示器 - Scroll indicator -->
+                <div class="scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 統計數據區域 - Statistics section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-map-marker-alt stat-icon"></i>
+                            <div class="stat-number">14,321</div>
+                            <div class="stat-unit" data-zh="平方米" data-pt="m²">平方米</div>
+                            <div class="stat-label" data-zh="佔地面積" data-pt="Área">佔地面積</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-calendar-alt stat-icon"></i>
+                            <div class="stat-number">1958</div>
+                            <div class="stat-unit" data-zh="年" data-pt="ano">年</div>
+                            <div class="stat-label" data-zh="建立年份" data-pt="Estabelecido">建立年份</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-users stat-icon"></i>
+                            <div class="stat-number">8,000</div>
+                            <div class="stat-unit" data-zh="人" data-pt="pessoas">人</div>
+                            <div class="stat-label" data-zh="可容納人數" data-pt="Capacidade">可容納人數</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-trophy stat-icon"></i>
+                            <div class="stat-number">100+</div>
+                            <div class="stat-unit" data-zh="場次" data-pt="eventos">場次</div>
+                            <div class="stat-label" data-zh="舉辦活動" data-pt="Eventos">舉辦活動</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 亮點展示區域 - Highlights section -->
+            <div class="highlights-section">
+                <div class="container">
+                    <h2 class="section-title" data-zh="場館特色" data-pt="Características do Estádio">場館特色</h2>
+                    
+                    <div class="highlights-grid">
+                        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="highlight-image">
+                                <img src="https://scontent.fmfm1-1.fna.fbcdn.net/v/t1.6435-9/123269633_3019334758301188_8264401659424234874_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=33274f&_nc_ohc=1XtDGeENzdkQ7kNvwF3_YsS&_nc_oc=AdnODtdmQPjA8ltCwixzvPRcxR-rbuq5yjDJgOmPUxDU8NNf4kGUpiV8DOD9qcBGaRo&_nc_zt=23&_nc_ht=scontent.fmfm1-1.fna&_nc_gid=1BgLnkruRxGVwNfTccNQTQ&oh=00_AfPIIbntIy4g032MtX2RVO4y5_CgHqj9-IfqKqinptF9aQ&oe=6872FB10" alt="歷史悠久">
+                                <div class="highlight-overlay"></div>
+                            </div>
+                            <div class="highlight-content">
+                                <h3 class="highlight-title" data-zh="歷史悠久" data-pt="História Rica">歷史悠久</h3>
+                                <p class="highlight-description" data-zh="自1958年建立以來，見證澳門65年的發展歷程" data-pt="Testemunhando 65 anos de desenvolvimento de Macau desde 1958">自1958年建立以來，見證澳門65年的發展歷程</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="highlight-image">
+                                <img src="https://lh3.googleusercontent.com/proxy/KLjhZAMlvuQGd9k8_CmXrizGgsqJ2mG_GINLOk_TGcyPSkLQ8TJryS8TUclvQIWltq2I5d8loFa-6MRtYB129DN0W23YvzkvOnD_6Vk_p_j-EyLXWLZrjEea3DEF10SQaDHW" alt="設施完善">
+                                <div class="highlight-overlay"></div>
+                            </div>
+                            <div class="highlight-content">
+                                <h3 class="highlight-title" data-zh="設施完善" data-pt="Instalações Completas">設施完善</h3>
+                                <p class="highlight-description" data-zh="擁有標準足球場、室內體育館、游泳池等現代化設施" data-pt="Com campo de futebol padrão, ginásio coberto, piscina e outras instalações modernas">擁有標準足球場、室內體育館、游泳池等現代化設施</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="highlight-image">
+                                <img src="https://www.macausports.com.mo/media/upload/202111/07/202111071706165189.jpg" alt="文化地標">
+                                <div class="highlight-overlay"></div>
+                            </div>
+                            <div class="highlight-content">
+                                <h3 class="highlight-title" data-zh="文化地標" data-pt="Marco Cultural">文化地標</h3>
+                                <p class="highlight-description" data-zh="承辦各類大型活動，是澳門重要的文化體育地標" data-pt="Organizando vários eventos de grande escala, é um importante marco cultural e desportivo de Macau">承辦各類大型活動，是澳門重要的文化體育地標</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 歷史變遷頁面 - History page -->
+        <section class="page" id="history-page">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-zh="歷史變遷" data-pt="Evolução Histórica">歷史變遷</h1>
+                    <p class="page-subtitle" data-zh="從南灣到關閘的發展歷程" data-pt="Do desenvolvimento de Nam Van a Portas do Cerco">從南灣到關閘的發展歷程</p>
+                </div>
+            </div>
+
+            <!-- 歷史時期對比 - Historical periods comparison -->
+            <div class="history-periods">
+                <div class="container">
+                    <!-- 原址時期 - Original site period -->
+                    <div class="period-section" data-aos="fade-right">
+                        <div class="period-content">
+                            <div class="period-image">
+                                <img src="https://scontent.fmfm1-2.fna.fbcdn.net/v/t39.30808-6/489995967_2734794146719826_818609698289730045_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ahTREMvFXmIQ7kNvwFR2xZI&_nc_oc=AdkuFq6wjz5LPoXGk5x6x597NS9mAxvAhnm6Cc4T4fxtxCJ_OqzwzfhjkdVfTZDDwJubQXSQSW5Qf9ST6QvEFzlr&_nc_zt=23&_nc_ht=scontent.fmfm1-2.fna&_nc_gid=VEznAxyMo5u3Eb7915kcLQ&oh=00_AfP8ggQlUcuWmWltNoTMuCP9YDFHVSBzvnxiNytCE8fI6g&oe=685A1424" alt="原址時期">
+                                <div class="period-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-zh="南灣殷皇子大馬路" data-pt="Avenida do Infante D. Henrique, Nam Van">南灣殷皇子大馬路</span>
+                                </div>
+                            </div>
+                            <div class="period-info">
+                                <h3 class="period-title" data-zh="原址時期 (1958-2003)" data-pt="Período Original (1958-2003)">原址時期 (1958-2003)</h3>
+                                <div class="period-area">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <span data-zh="約10,000平方米" data-pt="Cerca de 10.000 metros quadrados">約10,000平方米</span>
+                                </div>
+                                <p class="period-description" data-zh="原為澳門廣大中學的非正式球場，1958年由澳門工會聯合總會動員逾萬名工人及師生義務勞動擴建" data-pt="Originalmente um campo informal da Escola Kwong Tai de Macau, expandido em 1958 pela Federação das Associações dos Operários de Macau com mais de 10.000 trabalhadores e estudantes">原為澳門廣大中學的非正式球場，1958年由澳門工會聯合總會動員逾萬名工人及師生義務勞動擴建</p>
+                                
+                                <div class="period-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características Principais:">主要特色：</h4>
+                                    <ul class="features-list">
+                                        <li data-zh="1970年增設足球場、籃球場" data-pt="Campo de futebol e basquetebol adicionados em 1970">1970年增設足球場、籃球場</li>
+                                        <li data-zh="1973年擴建兩層活動中心" data-pt="Centro de atividades de dois andares expandido em 1973">1973年擴建兩層活動中心</li>
+                                        <li data-zh="附設飲食部提供平價餐飲" data-pt="Restaurante anexo oferecendo refeições a preços acessíveis">附設飲食部提供平價餐飲</li>
+                                        <li data-zh="舉辦工人運動會、公益金百萬行等活動" data-pt="Organizou jogos dos trabalhadores, Caminhada do Milhão, etc.">舉辦工人運動會、公益金百萬行等活動</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 現址時期 - Current site period -->
+                    <div class="period-section reverse" data-aos="fade-left">
+                        <div class="period-content">
+                            <div class="period-image">
+                                <img src="https://statics.exmoo.com/uploads/2020-06-06/ghuuZeG8sdMzb1uue37t.jpg" alt="現址時期">
+                                <div class="period-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-zh="關閘廣場" data-pt="Praça das Portas do Cerco">關閘廣場</span>
+                                </div>
+                            </div>
+                            <div class="period-info">
+                                <h3 class="period-title" data-zh="現址時期 (2003至今)" data-pt="Período Atual (2003-presente)">現址時期 (2003至今)</h3>
+                                <div class="period-area">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <span data-zh="14,321平方米" data-pt="14.321 metros quadrados">14,321平方米</span>
+                                </div>
+                                <p class="period-description" data-zh="2003年9月13日遷至關閘廣場，設有現代化體育設施，成為澳門重要的綜合體育場館" data-pt="Transferido para a Praça das Portas do Cerco em 13 de setembro de 2003, com instalações desportivas modernas, tornando-se um importante complexo desportivo de Macau">2003年9月13日遷至關閘廣場，設有現代化體育設施，成為澳門重要的綜合體育場館</p>
+                                
+                                <div class="period-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características Principais:">主要特色：</h4>
+                                    <ul class="features-list">
+                                        <li data-zh="標準人造草足球場" data-pt="Campo de futebol padrão com relva artificial">標準人造草足球場</li>
+                                        <li data-zh="室內體育館" data-pt="Ginásio coberto">室內體育館</li>
+                                        <li data-zh="戶外泳池" data-pt="Piscina exterior">戶外泳池</li>
+                                        <li data-zh="多功能室及地下停車場" data-pt="Salas multifuncionais e estacionamento subterrâneo">多功能室及地下停車場</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 發展時間軸 - Development timeline -->
+            <div class="timeline-section">
+                <div class="container">
+                    <h2 class="section-title" data-zh="發展時間軸" data-pt="Cronologia de Desenvolvimento">發展時間軸</h2>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="timeline-year">1958</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="工人體育場初建與擴建" data-pt="Construção e expansão inicial do Estádio dos Trabalhadores">工人體育場初建與擴建</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="timeline-year">1970</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="增設足球場、籃球場" data-pt="Adição de campo de futebol e basquetebol">增設足球場、籃球場</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="timeline-year">1973</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="擴建兩層活動中心" data-pt="Expansão do centro de atividades de dois andares">擴建兩層活動中心</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="timeline-year">2003</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="遷址關閘廣場" data-pt="Transferência para Portas do Cerco">遷址關閘廣場</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="timeline-year">2006</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="納入澳門公共體育設施網絡" data-pt="Integração na rede de instalações desportivas públicas de Macau">納入澳門公共體育設施網絡</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="timeline-year">2007</div>
+                            <div class="timeline-content">
+                                <h3 data-zh="承辦亞洲室內運動會賽事" data-pt="Organização de eventos dos Jogos Asiáticos Indoor">承辦亞洲室內運動會賽事</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 重大事件頁面 - Events page -->
+        <section class="page" id="events-page">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-zh="重大事件" data-pt="Eventos Importantes">重大事件</h1>
+                    <p class="page-subtitle" data-zh="見證澳門歷史的重要時刻" data-pt="Momentos importantes que testemunharam a história de Macau">見證澳門歷史的重要時刻</p>
+                </div>
+            </div>
+
+            <!-- 特色事件 - Featured event -->
+            <div class="featured-event">
+                <div class="container">
+                    <div class="featured-card" data-aos="fade-up">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span data-zh="重點事件" data-pt="Evento Destacado">重點事件</span>
+                        </div>
+                        
+                        <div class="featured-content">
+                            <div class="featured-image">
+                                <img src="https://www.macaumemory.mo/uploads//images/p0017665/20230926102059076.jpg" alt="1967年反英抗暴鬥爭集會">
+                            </div>
+                            
+                            <div class="featured-info">
+                                <h3 class="featured-title" data-zh="1967年「反英抗暴鬥爭」集會" data-pt="Assembleia da 'Luta Anti-Britânica' de 1967">1967年「反英抗暴鬥爭」集會</h3>
+                                
+                                <div class="featured-meta">
+                                    <div class="meta-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span data-zh="1967年6月16日" data-pt="16 de junho de 1967">1967年6月16日</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="featured-description" data-zh="澳門工聯會下屬的「支鬥委會」在工人體育場舉行「澳門各業工人聲討英帝罪行支援港九同胞抗暴鬥爭大會」，這是澳門歷史上規模最大的工人集會之一。" data-pt="O 'Comitê de Apoio à Luta' subordinado à Federação das Associações dos Operários de Macau realizou a 'Assembleia dos Trabalhadores de Todos os Setores de Macau para Denunciar os Crimes do Imperialismo Britânico e Apoiar a Luta Anti-Violência dos Compatriotas de Hong Kong e Kowloon' no Estádio dos Trabalhadores.">澳門工聯會下屬的「支鬥委會」在工人體育場舉行「澳門各業工人聲討英帝罪行支援港九同胞抗暴鬥爭大會」，這是澳門歷史上規模最大的工人集會之一。</p>
+                                
+                                <div class="significance-box">
+                                    <h4 data-zh="歷史意義" data-pt="Significado Histórico">歷史意義</h4>
+                                    <p data-zh="這一事件反映了澳門在冷戰時期的政治立場，與中國內地的反殖民運動相呼應，成為澳門社會運動史上的重要里程碑。" data-pt="Este evento refletiu a posição política de Macau durante a Guerra Fria, ecoando o movimento anti-colonial da China continental, tornando-se um marco importante na história dos movimentos sociais de Macau.">這一事件反映了澳門在冷戰時期的政治立場，與中國內地的反殖民運動相呼應，成為澳門社會運動史上的重要里程碑。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="featured-event">
+                <div class="container">
+                    <div class="featured-card" data-aos="fade-up">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span data-zh="重點事件" data-pt="Evento Destacado">重點事件</span>
+                        </div>
+                        
+                        <div class="featured-content">
+                            <div class="featured-image">
+                                <img src="https://scontent.fmfm1-2.fna.fbcdn.net/v/t39.30808-6/493350954_29254241580886816_3363213389503502879_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=hirs6oii9cMQ7kNvwHYJnkZ&_nc_oc=AdnEQhrz7YwfphlhG5U7JwBnsNw2x007LMbiDn6NdZH7ExDJZ5xdWCB8T9QNPVFow5wHqUcc4wKPXyo708Jz_SiQ&_nc_zt=23&_nc_ht=scontent.fmfm1-2.fna&_nc_gid=stepAH1TlFuFu3stWf24ug&oh=00_AfPzmfrylZZoY0hmolNs-yOHTrSdOJX2cLI3XTHsZQmXHw&oe=6859FA07" alt="1967年反英抗暴鬥爭集會">
+                            </div>
+                            
+                            <div class="featured-info">
+                                <h3 class="featured-title" data-zh="1966年「澳門鬥牛」" data-pt="1966 Tourada de Macau">1967年「反英抗暴鬥爭」集會</h3>
+                                
+                                <div class="featured-meta">
+                                    <div class="meta-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span data-zh="始於1966年8月" data-pt="Iniciado em agosto de 1966">1967年6月16日</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="featured-description" data-zh="澳門鬥牛始於一九六六年八月，也是遠東首辦，一共演出十場，場場滿座，轟動一時。圉牛場設在新填海羅理基博士大馬路與賈羅布大馬路交界附近，臨時搭建一座八角形的大竹棚，中為围牛場，四周看台，可容纳六千觀;棚旁設牛棚，豢養廿七頭牛。" data-pt="O 'Comitê de Apoio à Luta' subordinado à Federação das Associações dos Operários de Macau realizou a 'Assembleia dos Trabalhadores de Todos os Setores de Macau para Denunciar os Crimes do Imperialismo Britânico e Apoiar a Luta Anti-Violência dos Compatriotas de Hong Kong e Kowloon' no Estádio dos Trabalhadores.">澳門工聯會下屬的「支鬥委會」在工人體育場舉行「澳門各業工人聲討英帝罪行支援港九同胞抗暴鬥爭大會」，這是澳門歷史上規模最大的工人集會之一。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 事件時間軸 - Events timeline -->
+            <div class="events-timeline">
+                <div class="container">
+                    <h2 class="section-title" data-zh="歷史事件時間軸" data-pt="Cronologia de Eventos Históricos">歷史事件時間軸</h2>
+                    
+                    <div class="events-list">
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="100">
+                            <div class="event-year">1960</div>
+                            <div class="event-content">
+                                <div class="event-type" data-zh="慈善活動" data-pt="Atividade de Caridade">慈善活動</div>
+                                <h3 class="event-title" data-zh="明愛慈善團體學生園遊會" data-pt="Festival de Estudantes da Caritas">明愛慈善團體學生園遊會</h3>
+                                <p class="event-description" data-zh="首次大型慈善活動在工人體育場舉行" data-pt="Primeira grande atividade de caridade realizada no Estádio dos Trabalhadores">首次大型慈善活動在工人體育場舉行</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="event-year">1966-1997</div>
+                            <div class="event-content">
+                                <div class="event-type" data-zh="文化表演" data-pt="Espetáculo Cultural">文化表演</div>
+                                <h3 class="event-title" data-zh="澳門鬥牛表演" data-pt="Espetáculos de Tourada de Macau">澳門鬥牛表演</h3>
+                                <p class="event-description" data-zh="共舉辦五次鬥牛表演，成為澳門獨特的文化活動" data-pt="Cinco espetáculos de tourada realizados, tornando-se uma atividade cultural única de Macau">共舉辦五次鬥牛表演，成為澳門獨特的文化活動</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="event-year">1987</div>
+                            <div class="event-content">
+                                <div class="event-type" data-zh="文化展覽" data-pt="Exposição Cultural">文化展覽</div>
+                                <h3 class="event-title" data-zh="中國園藝菊花展" data-pt="Exposição de Crisântemos da Horticultura Chinesa">中國園藝菊花展</h3>
+                                <p class="event-description" data-zh="展示中國傳統園藝文化，吸引大量市民參觀" data-pt="Exibindo a cultura tradicional de horticultura chinesa, atraindo muitos cidadãos">展示中國傳統園藝文化，吸引大量市民參觀</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-right" data-aos-delay="400">
+                            <div class="event-year">1992</div>
+                            <div class="event-content">
+                                <div class="event-type" data-zh="政治活動" data-pt="Atividade Política">政治活動</div>
+                                <h3 class="event-title" data-zh="基本法（中秋）園遊會" data-pt="Festival da Lei Básica (Meio do Outono)">基本法（中秋）園遊會</h3>
+                                <p class="event-description" data-zh="慶祝澳門基本法頒布的重要活動" data-pt="Atividade importante para celebrar a promulgação da Lei Básica de Macau">慶祝澳門基本法頒布的重要活動</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item" data-aos="fade-left" data-aos-delay="500">
+                            <div class="event-year">2021-2023</div>
+                            <div class="event-content">
+                                <div class="event-type" data-zh="公共服務" data-pt="Serviço Público">公共服務</div>
+                                <h3 class="event-title" data-zh="新冠疫情核酸檢測站" data-pt="Estação de Teste de Ácido Nucleico COVID-19">新冠疫情核酸檢測站</h3>
+                                <p class="event-description" data-zh="疫情期間設置核酸檢測站，服務澳門市民" data-pt="Durante a pandemia, foi estabelecida uma estação de teste de ácido nucleico para servir os cidadãos de Macau">疫情期間設置核酸檢測站，服務澳門市民</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 統計信息 - Statistics -->
+            <div class="events-stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-calendar-alt stat-icon"></i>
+                            <div class="stat-number">65+</div>
+                            <div class="stat-label" data-zh="年歷史" data-pt="Anos de História">年歷史</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-star stat-icon"></i>
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label" data-zh="重大活動" data-pt="Eventos Importantes">重大活動</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-users stat-icon"></i>
+                            <div class="stat-number">8,000+</div>
+                            <div class="stat-label" data-zh="最大參與人數" data-pt="Máximo de Participantes">最大參與人數</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fas fa-map-marker-alt stat-icon"></i>
+                            <div class="stat-number">2</div>
+                            <div class="stat-label" data-zh="歷史地點" data-pt="Locais Históricos">歷史地點</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 設施介紹頁面 - Facilities page -->
+        <section class="page" id="facilities-page">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-zh="設施介紹" data-pt="Instalações">設施介紹</h1>
+                    <p class="page-subtitle" data-zh="現代化綜合體育場館設施" data-pt="Instalações modernas do complexo desportivo">現代化綜合體育場館設施</p>
+                </div>
+            </div>
+
+            <!-- 場館概況 - Overview -->
+            <div class="facilities-overview">
+                <div class="container">
+                    <div class="overview-card" data-aos="fade-up">
+                        <h2 class="overview-title" data-zh="場館概況" data-pt="Visão Geral do Estádio">場館概況</h2>
+                        
+                        <div class="overview-stats">
+                            <div class="overview-stat">
+                                <div class="stat-value" data-zh="14,321平方米" data-pt="14.321 metros quadrados">14,321平方米</div>
+                                <div class="stat-label" data-zh="總面積" data-pt="Área Total">總面積</div>
+                            </div>
+                            <div class="overview-stat">
+                                <div class="stat-value" data-zh="2003年9月13日" data-pt="13 de setembro de 2003">2003年9月13日</div>
+                                <div class="stat-label" data-zh="啟用日期" data-pt="Data de Abertura">啟用日期</div>
+                            </div>
+                            <div class="overview-stat">
+                                <div class="stat-value" data-zh="澳門關閘廣場" data-pt="Praça das Portas do Cerco, Macau">澳門關閘廣場</div>
+                                <div class="stat-label" data-zh="地理位置" data-pt="Localização">地理位置</div>
+                            </div>
+                        </div>
+                        
+                        <p class="overview-description" data-zh="澳門工人體育場是一座現代化的綜合體育場館，設有多種體育設施，能夠滿足不同類型的體育活動和社區需求。" data-pt="O Estádio dos Trabalhadores de Macau é um complexo desportivo moderno com várias instalações desportivas, capaz de satisfazer diferentes tipos de atividades desportivas e necessidades comunitárias.">澳門工人體育場是一座現代化的綜合體育場館，設有多種體育設施，能夠滿足不同類型的體育活動和社區需求。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主要設施 - Main facilities -->
+            <div class="facilities-grid">
+                <div class="container">
+                    <h2 class="section-title" data-zh="主要設施" data-pt="Instalações Principais">主要設施</h2>
+                    
+                    <div class="facilities-list">
+                        <!-- 標準足球場 - Standard football field -->
+                        <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="facility-image">
+                                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr3nNUAp_AMqF1NxuFEReBJB61RIVWeFFgOxgIr27czewzHRxVMBXi_nt5iNtanYgPVfAt8ODjIItdZlZbLiuqRNOXMYIGoviqYMOylc8idl1ErTGXV3Q4JCUx354nOgp6zYBvgRQ=s1360-w1360-h1020-rw" alt="標準足球場">
+                                <div class="facility-icon">
+                                    <i class="fas fa-futbol"></i>
+                                </div>
+                            </div>
+                            <div class="facility-content">
+                                <h3 class="facility-name" data-zh="標準足球場" data-pt="Campo de Futebol Padrão">標準足球場</h3>
+                                <p class="facility-description" data-zh="人造草標準足球場，符合國際比賽標準" data-pt="Campo de futebol padrão com relva artificial, conforme padrões internacionais">人造草標準足球場，符合國際比賽標準</p>
+                                <div class="facility-capacity">
+                                    <i class="fas fa-users"></i>
+                                    <span data-zh="可容納觀眾席" data-pt="Com arquibancadas para espectadores">可容納觀眾席</span>
+                                </div>
+                                <div class="facility-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características:">主要特色：</h4>
+                                    <div class="features-grid">
+                                        <span class="feature-tag" data-zh="人造草皮" data-pt="Relva artificial">人造草皮</span>
+                                        <span class="feature-tag" data-zh="標準尺寸" data-pt="Dimensões padrão">標準尺寸</span>
+                                        <span class="feature-tag" data-zh="夜間照明" data-pt="Iluminação noturna">夜間照明</span>
+                                        <span class="feature-tag" data-zh="排水系統" data-pt="Sistema de drenagem">排水系統</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 室內體育館 - Indoor gymnasium -->
+                        <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="facility-image">
+                                <img src="https://statics.exmoo.com/uploads/2019-10-03/NV80flOn7CR9nJvFZOig.jpg" alt="室內體育館">
+                                <div class="facility-icon">
+                                    <i class="fas fa-basketball-ball"></i>
+                                </div>
+                            </div>
+                            <div class="facility-content">
+                                <h3 class="facility-name" data-zh="室內體育館" data-pt="Ginásio Coberto">室內體育館</h3>
+                                <p class="facility-description" data-zh="多功能室內體育館，可舉辦各類室內運動" data-pt="Ginásio multifuncional coberto para vários desportos indoor">多功能室內體育館，可舉辦各類室內運動</p>
+                                <div class="facility-capacity">
+                                    <i class="fas fa-users"></i>
+                                    <span data-zh="可容納數百人" data-pt="Capacidade para centenas de pessoas">可容納數百人</span>
+                                </div>
+                                <div class="facility-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características:">主要特色：</h4>
+                                    <div class="features-grid">
+                                        <span class="feature-tag" data-zh="籃球場" data-pt="Campo de basquetebol">籃球場</span>
+                                        <span class="feature-tag" data-zh="羽毛球場" data-pt="Campo de badminton">羽毛球場</span>
+                                        <span class="feature-tag" data-zh="空調設備" data-pt="Ar condicionado">空調設備</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 戶外游泳池 - Outdoor swimming pool -->
+                        <div class="facility-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="facility-image">
+                                <img src="https://lh5.googleusercontent.com/proxy/rl1_HGjb-F-fNI6rR_oGBuTZS3YlLRrRAuKEjPUqhDWuqLPevUgg2mQHbJVocVauXAUFQyK7fU92KkUW1b8SxVLTz0D8dl6yKzTds5ophydpzU2u-0a70OR0PQ" alt="戶外游泳池">
+                                <div class="facility-icon">
+                                    <i class="fas fa-swimmer"></i>
+                                </div>
+                            </div>
+                            <div class="facility-content">
+                                <h3 class="facility-name" data-zh="戶外游泳池" data-pt="Piscina Exterior">戶外游泳池</h3>
+                                <p class="facility-description" data-zh="標準戶外游泳池，提供游泳訓練和休閒" data-pt="Piscina exterior padrão para treino e lazer">標準戶外游泳池，提供游泳訓練和休閒</p>
+                                <div class="facility-capacity">
+                                    <i class="fas fa-users"></i>
+                                    <span data-zh="多泳道設計" data-pt="Design multi-pistas">多泳道設計</span>
+                                </div>
+                                <div class="facility-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características:">主要特色：</h4>
+                                    <div class="features-grid">
+                                        <span class="feature-tag" data-zh="標準泳池" data-pt="Piscina padrão">標準泳池</span>
+                                        <span class="feature-tag" data-zh="兒童池" data-pt="Piscina infantil">兒童池</span>
+                                        <span class="feature-tag" data-zh="救生設備" data-pt="Equipamento de salvamento">救生設備</span>
+                                        <span class="feature-tag" data-zh="更衣室" data-pt="Vestiários">更衣室</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 多功能室 - Multi-function rooms -->
+                        <div class="facility-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="facility-image">
+                                <img src="https://cdn2.tdm.com.mo/uploads/video_thumb/2024-08/f23eba91928115b7882ec5cbc4f75e39.jpg" alt="多功能室">
+                                <div class="facility-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="facility-content">
+                                <h3 class="facility-name" data-zh="多功能室" data-pt="Salas Multifuncionais">多功能室</h3>
+                                <p class="facility-description" data-zh="可用於會議、培訓、小型活動等" data-pt="Para reuniões, formação, pequenos eventos, etc.">可用於會議、培訓、小型活動等</p>
+                                <div class="facility-capacity">
+                                    <i class="fas fa-users"></i>
+                                    <span data-zh="靈活配置" data-pt="Configuração flexível">靈活配置</span>
+                                </div>
+                                <div class="facility-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características:">主要特色：</h4>
+                                    <div class="features-grid">
+                                        <span class="feature-tag" data-zh="會議設備" data-pt="Equipamento de reunião">會議設備</span>
+                                        <span class="feature-tag" data-zh="音響系統" data-pt="Sistema de som">音響系統</span>
+                                        <span class="feature-tag" data-zh="投影設備" data-pt="Equipamento de projeção">投影設備</span>
+                                        <span class="feature-tag" data-zh="空調" data-pt="Ar condicionado">空調</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 地下停車場 - Underground parking -->
+                        <div class="facility-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="facility-image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHBBlL4IzZ1p3_vK-_2SDy2oOUN1tWoG1Akg&usqp=CAU" alt="地下停車場">
+                                <div class="facility-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </div>
+                            <div class="facility-content">
+                                <h3 class="facility-name" data-zh="地下停車場" data-pt="Estacionamento Subterrâneo">地下停車場</h3>
+                                <p class="facility-description" data-zh="提供充足的停車位，方便市民使用" data-pt="Fornece lugares de estacionamento suficientes para conveniência dos cidadãos">提供充足的停車位，方便市民使用</p>
+                                <div class="facility-capacity">
+                                    <i class="fas fa-car"></i>
+                                    <span data-zh="數十個車位" data-pt="Dezenas de lugares">數十個車位</span>
+                                </div>
+                                <div class="facility-features">
+                                    <h4 data-zh="主要特色：" data-pt="Características:">主要特色：</h4>
+                                    <div class="features-grid">
+                                        <span class="feature-tag" data-zh="地下停車" data-pt="Estacionamento subterrâneo">地下停車</span>
+                                        <span class="feature-tag" data-zh="安全監控" data-pt="Vigilância de segurança">安全監控</span>
+                                        <span class="feature-tag" data-zh="24小時開放" data-pt="Aberto 24 horas">24小時開放</span>
+                                        <span class="feature-tag" data-zh="便民服務" data-pt="Serviços convenientes">便民服務</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服務時間 - Service hours -->
+            <div class="service-hours">
+                <div class="container">
+                    <h2 class="section-title" data-zh="服務時間" data-pt="Horários de Serviço">服務時間</h2>
+                    
+                    <div class="hours-list">
+                        <div class="hours-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="hours-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="hours-content">
+                                <h3 class="hours-service" data-zh="體育訓練" data-pt="Treino Desportivo">體育訓練</h3>
+                                <div class="hours-time" data-zh="週一至週日 6:00-22:00" data-pt="Segunda a Domingo 6:00-22:00">週一至週日 6:00-22:00</div>
+                            </div>
+                        </div>
+
+                        <div class="hours-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="hours-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="hours-content">
+                                <h3 class="hours-service" data-zh="場地租借" data-pt="Aluguer de Instalações">場地租借</h3>
+                                <div class="hours-time" data-zh="需提前預約" data-pt="Reserva antecipada necessária">需提前預約</div>
+                            </div>
+                        </div>
+
+                        <div class="hours-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="hours-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="hours-content">
+                                <h3 class="hours-service" data-zh="游泳開放" data-pt="Natação Aberta">游泳開放</h3>
+                                <div class="hours-time" data-zh="夏季 6:00-21:00" data-pt="Verão 6:00-21:00">夏季 6:00-21:00</div>
+                            </div>
+                        </div>
+
+                        <div class="hours-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="hours-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="hours-content">
+                                <h3 class="hours-service" data-zh="停車服務" data-pt="Serviço de Estacionamento">停車服務</h3>
+                                <div class="hours-time" data-zh="24小時開放" data-pt="Aberto 24 horas">24小時開放</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 關於我們頁面 - About page -->
+        <section class="page" id="about-page">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-zh="關於我們" data-pt="Sobre Nós">關於我們</h1>
+                    <p class="page-subtitle" data-zh="網站制作團隊介紹" data-pt="Apresentação da Equipa de Desenvolvimento do Website">網站制作團隊介紹</p>
+                    <p class="page-description" data-zh="本網站由一群熱愛澳門歷史文化的學生團隊精心制作，旨在展示澳門工人體育場的豐富歷史和重要意義。" data-pt="Este website foi cuidadosamente desenvolvido por uma equipa de estudantes apaixonados pela história e cultura de Macau, com o objetivo de mostrar a rica história e importância do Estádio dos Trabalhadores de Macau.">本網站由一群熱愛澳門歷史文化的學生團隊精心制作，旨在展示澳門工人體育場的豐富歷史和重要意義。</p>
+                </div>
+            </div>
+
+            <!-- 團隊介紹 - Team introduction -->
+            <div class="team-section">
+                <div class="container">
+                    <h2 class="section-title" data-zh="制作團隊" data-pt="Equipa de Desenvolvimento">制作團隊</h2>
+                    
+                    <div class="team-grid">
+                        <!-- 邱宗維 - Team member 1 -->
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="邱宗維">
+                                <div class="team-number">9</div>
+                            </div>
+                            <div class="team-info">
+                                <h3 class="team-name" data-zh="邱宗維" data-pt="Qiu Zongwei">邱宗維</h3>
+                                <div class="team-role" data-zh="項目負責人" data-pt="Líder do Projeto">項目負責人</div>
+                                <p class="team-description" data-zh="負責整體項目規劃和歷史資料收集" data-pt="Responsável pelo planeamento geral do projeto e recolha de dados históricos">負責整體項目規劃和歷史資料收集</p>
+                            </div>
+                        </div>
+
+                        <!-- 毛王文嘉 - Team member 2 -->
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1cd?w=150&h=150&fit=crop&crop=face" alt="毛王文嘉">
+                                <div class="team-number">18</div>
+                            </div>
+                            <div class="team-info">
+                                <h3 class="team-name" data-zh="毛王文嘉" data-pt="Mao Wang Wenjia">毛王文嘉</h3>
+                                <div class="team-role" data-zh="技術開發" data-pt="Desenvolvimento Técnico">技術開發</div>
+                                <p class="team-description" data-zh="負責用戶體驗設計" data-pt="Responsável pelo desenvolvimento frontend e design de experiência do utilizador">負責網站前端開發和用戶體驗設計</p>
+                            </div>
+                        </div>
+
+                        <!-- 黃綺婷 - Team member 3 -->
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="黃綺婷">
+                                <div class="team-number">28</div>
+                            </div>
+                            <div class="team-info">
+                                <h3 class="team-name" data-zh="黃綺婷" data-pt="Wong Kei Ting">黃綺婷</h3>
+                                <div class="team-role" data-zh="內容編輯" data-pt="Editora de Conteúdo">內容編輯</div>
+                                <p class="team-description" data-zh="負責內容整理和多語言翻譯工作" data-pt="Responsável pela organização de conteúdo e trabalho de tradução multilíngue">負責內容整理和多語言翻譯工作</p>
+                            </div>
+                        </div>
+
+                        <!-- 黃廷安 - Team member 4 -->
+                        <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="黃廷安">
+                                <div class="team-number">29</div>
+                            </div>
+                            <div class="team-info">
+                                <h3 class="team-name" data-zh="黃廷安" data-pt="Wong Ting On">黃廷安</h3>
+                                <div class="team-role" data-zh="設計師" data-pt="Designer">設計師</div>
+                                <p class="team-description" data-zh="負責視覺設計和用戶界面優化" data-pt="Responsável pelo design visual e otimização da interface do utilizador">負責視覺設計和用戶界面優化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使命與願景 - Mission and vision -->
+            <div class="mission-vision">
+                <div class="container">
+                    <div class="mission-vision-grid">
+                        <!-- 使命 - Mission -->
+                        <div class="mission-card" data-aos="fade-right">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="card-title" data-zh="我們的使命" data-pt="A Nossa Missão">我們的使命</h3>
+                            <p class="card-content" data-zh="通過現代化的網站技術，將澳門工人體育場的歷史文化以生動有趣的方式呈現給大眾，讓更多人了解和關注澳門的體育文化發展歷程。" data-pt="Através da tecnologia moderna de websites, apresentar a história e cultura do Estádio dos Trabalhadores de Macau de forma vívida e interessante ao público, permitindo que mais pessoas conheçam e se interssem pelo desenvolvimento da cultura desportiva de Macau.">通過現代化的網站技術，將澳門工人體育場的歷史文化以生動有趣的方式呈現給大眾，讓更多人了解和關注澳門的體育文化發展歷程。</p>
+                        </div>
+
+                        <!-- 願景 - Vision -->
+                        <div class="vision-card" data-aos="fade-left">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="card-title" data-zh="我們的願景" data-pt="A Nossa Visão">我們的願景</h3>
+                            <p class="card-content" data-zh="成為澳門歷史文化數字化展示的典範，為保護和傳承澳門文化遺產貢獻力量。" data-pt="Tornar-se um exemplo na exibição digital da história e cultura de Macau, contribuindo para a proteção e transmissão do património cultural de Macau.">成為澳門歷史文化數字化展示的典範，為保護和傳承澳門文化遺產貢獻力量。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 聯繫信息 - Contact information -->
+            <div class="contact-section">
+                <div class="container">
+                    <h2 class="section-title" data-zh="聯繫我們" data-pt="Contacte-nos">聯繫我們</h2>
+                    
+                    <div class="contact-card" data-aos="fade-up">
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-label" data-zh="電子郵箱" data-pt="Email">電子郵箱</div>
+                                    <div class="contact-value">Yyds76@gmail.com</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-label" data-zh="聯繫電話" data-pt="Telefone">聯繫電話</div>
+                                    <div class="contact-value">+853 6563 1844</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-label" data-zh="地址" data-pt="Endereço">地址</div>
+                                    <div class="contact-value" data-zh="澳門關閘廣場工人體育場" data-pt="Estádio dos Trabalhadores, Praça das Portas do Cerco, Macau">澳門關閘廣場工人體育場</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 致謝 - Acknowledgments -->
+            <div class="acknowledgments">
+                <div class="container">
+                    <div class="acknowledgments-content" data-aos="fade-up">
+                        <h2 class="acknowledgments-title" data-zh="特別鳴謝" data-pt="Agradecimentos Especiais">特別鳴謝</h2>
+                        <p class="acknowledgments-text" data-zh="感謝澳門記憶網站提供的珍貴歷史圖片和資料，感謝所有為澳門工人體育場歷史保存和傳承做出貢獻的人們。" data-pt="Agradecemos ao website Memória de Macau pelas preciosas imagens históricas e materiais fornecidos, e a todas as pessoas que contribuíram para a preservação e transmissão da história do Estádio dos Trabalhadores de Macau.">感謝澳門記憶網站提供的珍貴歷史圖片和資料，感謝所有為澳門工人體育場歷史保存和傳承做出貢獻的人們。</p>
+                        <div class="copyright" data-zh="© 2024 澳門工人體育場網站" data-pt="© 2024 Website do Estádio dos Trabalhadores de Macau">© 2024 澳門工人體育場網站</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 浮動操作按鈕 - Floating action button -->
+    <div class="floating-btn" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- 引入AOS動畫庫 - Import AOS animation library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- 備用AOS庫 - Fallback AOS library -->
+    <script>
+        // 檢查AOS是否載入，如果沒有則嘗試備用CDN
+        if (typeof AOS === 'undefined') {
+            console.warn('⚠️ 主要AOS庫載入失敗，嘗試備用CDN...');
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+            script.onload = function() {
+                initializeAOS();
+            };
+            script.onerror = function() {
+                console.warn('⚠️ AOS動畫庫載入失敗，將禁用動畫效果');
+            };
+            document.head.appendChild(script);
+        } else {
+            initializeAOS();
+        }
+
+        function initializeAOS() {
+            try {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 100,
+                    disable: false
+                });
+                console.log('✅ AOS動畫庫初始化成功 / AOS animation library initialized successfully');
+            } catch (error) {
+                console.warn('⚠️ AOS初始化失敗:', error);
+            }
+        }
+    </script>
+    
+    <!-- 引入JavaScript文件 - Import JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
